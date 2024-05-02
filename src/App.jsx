@@ -1,9 +1,10 @@
 import './App.css'
+import Skills from './sections/SkillsSection/Skills'
 function App() {
 
   return (
     <>
-        hello focal-x
+       <Skills/>
     </>
   )
 }
