@@ -1,10 +1,15 @@
 import './App.css'
+import { Navbars } from './components/Navbar/Navbar'
+import { Hero } from './sections/HeroSection/Hero'
 import Skills from './sections/SkillsSection/Skills'
 function App() {
 
   return (
     <>
-       <Skills/>
+      <Navbars/>
+      <Hero />
+      <Skills/>
+       
     </>
   )
 }
