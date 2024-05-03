@@ -1,0 +1,32 @@
+
+.navbar{
+    background-color: rgb(0, 0, 0) !important ;
+    width: 100%;
+    height: max-content;
+    padding: 10px 90px;
+}
+.navbar .nav-link{
+    font-size: 23px !important;
+    font-weight: 400 !important;
+    color: #ffffff !important;
+    text-wrap: nowrap;
+}
+.navbar .nav-link:hover{
+    text-decoration: 1px underline  #ffbd39 !important;
+}
+.navbar .navbar-brand{
+    font-size: 33px !important;
+    font-weight: 800 !important;
+    color: rgb(255, 255, 255) !important;
+    text-wrap: nowrap;
+    margin-right: 36rem !important;
+}
+.navbar .list{
+        display: flex !important;
+        gap: 38px !important;
+}
+@media screen and (max-width:1000px){
+    .navbar{
+        padding: 10px 10px;
+    }
+}
