@@ -4,11 +4,10 @@ import { FaFlaskVial } from "react-icons/fa6";
 import { IoAnalytics } from "react-icons/io5";
 // import SectionHeader from "../../components/SectionHeader";
 const Services = () => {
-<<<<<<< HEAD
-=======
+
   // const descriptions =["web design", "Photography", "Web Developer", "App Developing","Branding","Product Strategy" ]
   // const icons = [<IoAnalytics />,]
->>>>>>> 82f04de590471cead344e781bc92dc7b81d61b9b
+
   const servicesData = [
     { key: 1, desc: "web design", icon: <IoAnalytics /> },
     { key: 2, desc: "Photography", icon: <FaFlaskVial /> },
