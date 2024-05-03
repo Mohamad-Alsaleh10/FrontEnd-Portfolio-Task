@@ -1,11 +1,11 @@
-import './App.css'
+import "./App.css";
+import Services from "./sections/ServicesSection/Services";
 function App() {
-
   return (
     <>
-        hello focal-x
+      <Services></Services>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
