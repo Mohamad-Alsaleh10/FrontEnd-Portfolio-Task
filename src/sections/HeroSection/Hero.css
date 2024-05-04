@@ -1,5 +1,4 @@
 .carousel{
-    padding-right: 50px;
     background-color: black !important;
     position: relative;
     
@@ -11,7 +10,7 @@
     background-position: right;
     /* background-size: auto; */
     background-size: 690px;
-
+    top: 10%;
 }
 .carousel .carousel-item2{
     height: 100vh;

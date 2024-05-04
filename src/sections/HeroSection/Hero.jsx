@@ -4,7 +4,7 @@ import Button from '../../components/Button/Button'
 
 export const Hero = () => {
   return (
-    <div>
+    <>
         <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div className="carousel-item carousel-item1 active">
@@ -42,6 +42,6 @@ export const Hero = () => {
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
-    </div>
+    </>
   )
 }

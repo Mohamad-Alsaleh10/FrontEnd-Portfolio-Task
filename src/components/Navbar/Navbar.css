@@ -30,3 +30,18 @@
         padding: 10px 10px;
     }
 }
+@media(max-width:1443px){
+    .navbar .navbar-brand{
+        margin-right: 25rem !important;
+    }
+}
+@media(max-width:1271px){
+    .navbar .navbar-brand{
+        margin-right: 13rem !important;
+    }
+}
+@media(max-width:1067px){
+    .navbar .navbar-brand{
+        margin-right: 8rem !important;
+    }
+}
