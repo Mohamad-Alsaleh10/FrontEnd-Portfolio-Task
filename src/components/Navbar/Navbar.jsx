@@ -1,7 +1,6 @@
-import React from 'react'
 import './Navbar.css'
 
-export const Navbars = () => {
+export const Navbar = () => {
   return (
     <div>
         <nav className="navbar navbar-expand-lg bg-body-tertiary fixed-top">
