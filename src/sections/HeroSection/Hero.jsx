@@ -9,8 +9,8 @@ export const Hero = () => {
             <div class="carousel-inner">
                 <div className="carousel-item carousel-item1 active">
                     <div className='carousel-caption'>
-                        <span>
-                            HEllo!
+                        <span  className='sp'>
+                            HELLO!
                         </span>
                         <h1>I'm <span>Clark Thompson</span></h1>
                         <h2>A Freelance Web Designer</h2>
@@ -24,7 +24,7 @@ export const Hero = () => {
 
                 <div className="carousel-item carousel-item2">
                     <div className='carousel-caption'>
-                        <span>HEllo!</span>
+                        <span className='sp'>HELLO!</span>
                         <h1> I'm a <span>web designer</span> based in London </h1>
                         <div className='buttons d-flex'>
                             <Button text='her me'/>

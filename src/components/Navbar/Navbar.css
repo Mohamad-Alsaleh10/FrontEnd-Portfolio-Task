@@ -6,7 +6,7 @@
     padding: 10px 90px;
 }
 .navbar .nav-link{
-    font-size: 23px !important;
+    font-size: 20px !important;
     font-weight: 400 !important;
     color: #ffffff !important;
     text-wrap: nowrap;
@@ -15,7 +15,7 @@
     text-decoration: 1px underline  #ffbd39 !important;
 }
 .navbar .navbar-brand{
-    font-size: 33px !important;
+    font-size: 1.65rem !important;
     font-weight: 800 !important;
     color: rgb(255, 255, 255) !important;
     text-wrap: nowrap;
