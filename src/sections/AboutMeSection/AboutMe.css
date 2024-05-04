@@ -10,7 +10,11 @@
   .my-4 {
     margin-bottom: 1.5rem !important; }
   
-    
+   
+  [type="number"]::-webkit-inner-spin-button,
+  [type="number"]::-webkit-outer-spin-button {
+    height: auto; }
+  
 .ftco-about .img-about {
     width: 100%;
     z-index: 0;
