@@ -1,11 +1,7 @@
-import './App.css'
-function App() {
+import "./App.css";
 
-  return (
-    <>
-        hello focal-x
-    </>
-  )
+function App() {
+  return <>hello focal-x</>;
 }
 
-export default App
+export default App;
