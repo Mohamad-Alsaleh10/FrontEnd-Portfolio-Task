@@ -10,9 +10,28 @@
     font-weight: 400 !important;
     color: #ffffff !important;
     text-wrap: nowrap;
+    padding: 3px;
+    transition: 0.3s;
+    position: relative;
 }
-.navbar .nav-link:hover{
-    text-decoration: 1px underline  #ffbd39 !important;
+.navbar .nav-item{
+    position: relative;
+}
+.navbar .nav-item::after{
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 3px;
+    top: 100%;
+    background-color: goldenrod;
+    transition: 0.3s;
+
+   
+
+}
+.navbar .nav-item:hover.nav-item::after{
+    width: 100%;
+
 }
 .navbar .navbar-brand{
     font-size: 1.65rem !important;
