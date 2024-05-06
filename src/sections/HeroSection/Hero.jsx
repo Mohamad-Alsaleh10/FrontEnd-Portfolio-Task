@@ -4,6 +4,7 @@ import Button from '../../components/Button/Button'
 
 export const Hero = () => {
   return (
+
     <div>
         <div id="carouselExampleAutoplaying" className="carousel slide" data-bs-ride="carousel">
             <div className="carousel-inner">
@@ -42,6 +43,6 @@ export const Hero = () => {
                 <span className="visually-hidden">Next</span>
             </button>
         </div>
-    </div>
+    </>
   )
 }
