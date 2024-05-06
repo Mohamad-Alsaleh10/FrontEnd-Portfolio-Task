@@ -1,8 +1,9 @@
+#carouselExampleAutoplaying{
+    padding-top: 90px;
+}
 .carousel{
     background-color: black !important;
     position: relative;
-    padding-bottom: 100px;
-    padding-top: 140px;
     
 }
 .carousel .carousel-item1{
@@ -10,9 +11,9 @@
     background-image: url(../../assets/images/bg_1.png) !important;
     background-repeat: no-repeat;
     background-position: right;
+    /* background-size: auto; */
     background-size: 690px;
     top: 10%;
-    background-size: cover;
 }
 .carousel .carousel-item2{
     height: 100vh;
@@ -86,10 +87,6 @@
 
 @media screen and (max-width:1000px)
  {
-    .carousel{
-        padding-bottom: unset;
-        padding-top: unset;
-    }
     .carousel .carousel-caption {
         width: 90% !important;
         position: absolute;
