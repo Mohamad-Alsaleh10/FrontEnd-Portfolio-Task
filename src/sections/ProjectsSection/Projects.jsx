@@ -13,7 +13,7 @@ const Projects = () => {
       <div className="project-section">
           <div className="container">
               <div className="row"> 
-                {[1,2,3,4,5].map(({index})=>{
+                {[1,2,3,4].map(({index})=>{
                   return (
                     <ProjectCard key={index} toggleModal={toggleModal}/>
                   );
