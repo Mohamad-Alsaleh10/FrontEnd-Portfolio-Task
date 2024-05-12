@@ -3,34 +3,47 @@ import { useState } from "react";
 import image from "./../../assets/images/bg_1.png"
 import "./ContactForm.css"
 import axios from "axios";
+// import axios from "axios";
 const ContactForm = () => {
+    const [formData, setFormData] = useState({
+        name: '',
+        subject: '',
+        email: '',
+        body: '',
+      });
     
-    const [name,setName] = useState();
-    const [email,setEmail] = useState();
-    const [subject,setSubject] = useState();
-    const [message,setMessage] = useState();
-
-    const sendData = (e) => { 
+      const handleChange = (e) => {
+        setFormData({...formData, [e.target.name]: e.target.value });
+      };
+    
+      const handleSubmit = async (e) => {
         e.preventDefault();
-        axios.post("api",{"name":name,"email":email,"subject":subject,"message":message})
-        .then(res => console.log(res));
-    };
+        try {
+          const response = await axios.post('http://127.0.0.1:8000/api/messages', formData);
+          console.log(response.data);
+          // Handle success, e.g., show a success message
+        } catch (error) {
+          console.error(error);
+          // Handle error, e.g., show an error message
+        }
+      };
+
 
     return (
     <>
         <div className="col-md-6 order-md-last d-flex pl-0 form">
-            <form action="#" className="bg-light p-4 p-md-5 contact-form" onSubmit={(e)=>{sendData(e)}}>
+            <form action="#" className="bg-light p-4 p-md-5 contact-form" onSubmit={handleSubmit}>
                 <div className="form-group">
-                    <input type="text" className="form-control" name="name" placeholder="Your Name" onChange={(e)=>{setName(e.target.value)}}/>
+                    <input type="text" className="form-control" name="name" placeholder="Your Name" onChange={handleChange}/>
                 </div>
                 <div className="form-group">
-                    <input type="text" className="form-control" name="email" placeholder="Your Email" onChange={(e)=>{setEmail(e.target.value)}}/>
+                    <input type="text" className="form-control" name="email" placeholder="Your Email" onChange={handleChange}/>
                 </div>
                 <div className="form-group">
-                    <input type="text" className="form-control" name="subject" placeholder="Subject" onChange={(e)=>{setSubject(e.target.value)}}/>
+                    <input type="text" className="form-control" name="subject" placeholder="Subject" onChange={handleChange}/>
                 </div>
                 <div className="form-group">
-                    <textarea name="message" id="" cols="30" rows="7" className="form-control" placeholder="Message" onChange={(e)=>{setMessage(e.target.value)}}></textarea>
+                    <textarea name="body" id="" cols="30" rows="7" className="form-control" placeholder="Message" onChange={handleChange}></textarea>
                 </div>
                 <div className="form-group">
                     <button type="submit" className="btn btn-primary py-3 px-5">Send Message</button>
@@ -45,3 +58,5 @@ const ContactForm = () => {
 }
 
 export default ContactForm
+
+

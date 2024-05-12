@@ -1,11 +1,11 @@
+/* eslint-disable react/prop-types */
 import "./ProjectDetails.css"
-import Image from "./../../assets/project-5.jpg"
 import { FaGithub } from "react-icons/fa";
 import { IoIosLink } from "react-icons/io";
 
 
 // eslint-disable-next-line react/prop-types
-const ProjectDetails = ({toggleModal}) => {
+const ProjectDetails = ({toggleModal , project }) => {
   return (
     <div className="modal" id="exampleModalCenter" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div className="modal-dialog modal-dialog-centered" role="document">
@@ -16,23 +16,22 @@ const ProjectDetails = ({toggleModal}) => {
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-        <img className="modal-image" src={Image}></img>
+        <img className="modal-image" src={`http://127.0.0.1:8000${project.image}`}></img>
         <div className="modal-body">
           <div className="tags">
-            <span className="tag">html</span>
-            <span className="tag">html</span>
-            <span className="tag">html</span>
+          {Array.isArray(project.skills) && project.skills.map((skill, index) => (
+              <span className="tag" key={index}>{skill.title}</span>
+            ))}
           </div>
-          <h5 className="card-title">Card title</h5>
-          <span className="date">12 April</span>
+          <h5 className="card-title">{project.title}</h5>
+          <span className="date">{project.date}</span>
           <p className="card-text">
-            Some quick example text to build on the card title and make up the
-            bulk of the card`s content.
+           {project.description}
           </p>
         </div>
         <div className="modal-footer">
-          <a className="github-icon" data-dismiss="modal"><FaGithub /></a>
-          <a className="link-icon"><IoIosLink /></a>
+          <a className="github-icon" data-dismiss="modal" href={project.github_repo}><FaGithub /></a>
+          <a className="link-icon" href={project.link}><IoIosLink /></a>
         </div>
       </div>
     </div>
