@@ -5,6 +5,7 @@ import { FaMapSigns } from "react-icons/fa";
 import { FaPhone,FaEarthAmericas  } from "react-icons/fa6";
 import { BiLogoTelegram } from "react-icons/bi";
 import ContactForm from "../../components/ContactForm/ContactForm";
+import SectionHeader from "../../components/SectionHeader/SectionHeader";
 // import ContactForm from "../../components/ContactForm/ContactForm";
 const Contact = () => {
     const contactInfo = [
@@ -27,8 +28,9 @@ const Contact = () => {
     ];
 
     return (
-        <div className="contact-section">
+        <div className="contact-section ftco-section">
             <div className="container">
+            <SectionHeader header={"Contact Me"} desc={"Far far away, behind the word mountains, far from the countries Vokalia and Consonantia"} />
                 <div className="row d-flex contact-info mb-5">
                     {contactInfo.map((item,index)=>{
                         return (

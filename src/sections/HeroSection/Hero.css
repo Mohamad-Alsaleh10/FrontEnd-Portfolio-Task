@@ -9,7 +9,6 @@
 }
 .carousel .carousel-item1{
     height: 100vh;
-    background-image: url(../../assets/images/bg_1.png) !important;
     background-repeat: no-repeat;
     background-position: right;
     /* background-size: auto; */
@@ -18,7 +17,6 @@
 }
 .carousel .carousel-item2{
     height: 100vh;
-    background-image: url(../../assets/images/bg_2.png);
     background-repeat: no-repeat;
     background-position: right;
     background-size:690px;

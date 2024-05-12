@@ -6,13 +6,14 @@ import Services from "./sections/ServicesSection/Services";
 import Projects from './sections/ProjectsSection/Projects'
 import Contact from "./sections/ContactSection/Contact";
 import Footer from "./components/Footer/Footer";
+import AboutMe from "./sections/AboutMeSection/AboutMe";
 
 function App() {
   return (
     <>
       <Navbar/>
       <Hero />
-      <Projects/>
+      <AboutMe/>
       <Skills/>
       <Projects/>
       <Services />

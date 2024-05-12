@@ -1,20 +1,12 @@
 // import React from 'react'
+import SectionHeader from '../../components/SectionHeader/SectionHeader'
 import './Skills.css'
 export default function Skills() {
 
     return (
         <section className="ftco-section" id="skills-section">
             <div className="container">
-                <div className="row justify-content-center pb-5">
-                    <div className="col-md-12 heading-section text-center ftco-animate fadeInUp ftco-animated">
-                        <h1 className="big big-2">Skills</h1>
-                        <h2 className="mb-4">My Skills</h2>
-                        <p>
-                            Far far away, behind the word mountains, far from the countries
-                            Vokalia and Consonantia
-                        </p>
-                    </div>
-                </div>
+                <SectionHeader header={"Skills"} desc={"Far far away, behind the word mountains, far from the countries Vokalia and Consonantia"} />
                 <div className="row">
                     <div className="col-md-6 animate-box">
                         <div className="progress-wrap ftco-animate fadeInUp ftco-animated">

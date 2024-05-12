@@ -5,6 +5,7 @@ import { TbBrandFigma } from "react-icons/tb";
 import { MdBrandingWatermark } from "react-icons/md";
 import { SiAdobephotoshop } from "react-icons/si";
 import { MdAppShortcut } from "react-icons/md";
+import SectionHeader from "../../components/SectionHeader/SectionHeader";
 // import SectionHeader from "../../components/SectionHeader";
 const Services = () => {
 
@@ -23,9 +24,10 @@ const Services = () => {
     return <ServicesCard key={data.key} desc={data.desc} icon={data.icon} />;
   });
   return (
-    <div>
+    <div className="ftco-section">
       {/* <SectionHeader /> */}
       <div className="container text-center">
+      <SectionHeader header={"Services"} desc={"Far far away, behind the word mountains, far from the countries Vokalia and Consonantia"} />
         <div className="row align-items-start">{services}</div>
       </div>
     </div>

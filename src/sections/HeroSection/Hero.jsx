@@ -1,20 +1,34 @@
 // import React from 'react'
 import './Hero.css'
 import Button from '../../components/Button/Button'
+import { useEffect, useState } from 'react'
+import axios from 'axios'
 
 export const Hero = () => {
+   const [response , setResponse]=useState(null);
+    useEffect(() => {
+        axios.get(`http://127.0.0.1:8000/api/userInfo/1`)
+      .then(res => {
+        setResponse(res.data.data);
+         console.log(response);
+      })
+    }, [response])
+
+    if(!response){
+        return null;
+    }
   return (
 
     <>
         <div id="carouselExampleAutoplaying" className="carousel slide" data-bs-ride="carousel">
             <div className="carousel-inner">
-                <div className="carousel-item carousel-item1 active">
+                <div style={{backgroundImage: `url(http://127.0.0.1:8000${response.second_image})`}} className="carousel-item carousel-item1 active">
                     <div className='carousel-caption'>
                         <span  className='sp'>
                             HELLO!
                         </span>
-                        <h1>I`m <span>Clark Thompson</span></h1>
-                        <h2>A Freelance Web Designer</h2>
+                        <h1>I`m <span>{response.name}</span></h1>
+                        <h2>A Freelance {response.job_title}</h2>
 
                         <div className='buttons d-flex'>
                             <button className='btn warning'> her me </button>
@@ -23,10 +37,10 @@ export const Hero = () => {
                     </div>
                 </div>
 
-                <div className="carousel-item carousel-item2">
+                <div style={{backgroundImage: `url(http://127.0.0.1:8000${response.first_image})`}} className="carousel-item carousel-item2">
                     <div className='carousel-caption'>
                         <span className='sp'>HELLO!</span>
-                        <h1> I`m a <span>web designer</span> based in London </h1>
+                        <h1> I`m a <span>{response.job_title}</span> based in London </h1>
                         <div className='buttons d-flex'>
                             <Button text='her me'/>
                             <button className='btn'>my work</button>
