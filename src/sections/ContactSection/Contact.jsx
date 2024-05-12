@@ -28,7 +28,7 @@ const Contact = () => {
     ];
 
     return (
-        <div className="contact-section ftco-section">
+        <div className="contact-section ftco-section" id="contact-section">
             <div className="container">
             <SectionHeader header={"Contact Me"} desc={"Far far away, behind the word mountains, far from the countries Vokalia and Consonantia"} />
                 <div className="row d-flex contact-info mb-5">

@@ -1,8 +1,23 @@
-import React from 'react'
+// import React from 'react'
 import './AboutMe.css'
 import aboutimg from './../../assets/images/bg_1.png'
+import { useEffect, useState } from 'react'
+import axios from 'axios'
 
 const AboutMe = () => {
+
+  const [response,setResponse] = useState(null);
+  useEffect(()=>{
+    axios.get('http://127.0.0.1:8000/api/userInfo/1')
+    .then(res => {
+      setResponse(res.data.data);
+    })
+  },[response])
+
+  if(!response){
+    return null;
+  }
+
   return (
     <div><section className="ftco-about img ftco-section ftco-no-pb" id="about-section">
     <div className="container">
@@ -14,19 +29,19 @@ const AboutMe = () => {
             </div>
           </div>
         </div>
-        <div className="col-md-6 col-lg-7 pl-lg-5 pb-5">
+        <div className="col-md-6 col-lg-7 pl-lg-5 pb-3">
           <div className="row justify-content-start pb-3">
             <div className="col-md-12 heading-section ftco-animate fadeInUp ftco-animated">
               <h1 className="big">About</h1>
               <h2 className="mb-4">About Me</h2>
               <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
               <ul className="about-info mt-4 px-md-0 px-2">
-                <li className="d-flex"><span>Name:</span> <span>Clark Thompson</span></li>
-                <li className="d-flex"><span>Date of birth:</span> <span>January 01, 1987</span></li>
-                <li className="d-flex"><span>Address:</span> <span>San Francisco CA 97987 USA</span></li>
+                <li className="d-flex"><span>Name:</span> <span>{response.name}</span></li>
+                <li className="d-flex"><span>Date of birth:</span> <span>{response.birth_date}</span></li>
+                <li className="d-flex"><span>Address:</span> <span>{response.address} - {response.city} - {response.country} </span></li>
                 <li className="d-flex"><span>Zip code:</span> <span>1000</span></li>
-                <li className="d-flex"><span>Email:</span> <span>clarkthomp@gmail.com</span></li>
-                <li className="d-flex"><span>Phone: </span> <span>+1-2234-5678-9-0</span></li>
+                <li className="d-flex"><span>Email:</span> <span>{response.website}</span></li>
+                <li className="d-flex"><span>Phone: </span> <span>{response.phone_number}</span></li>
               </ul>
             </div>
           </div>
@@ -36,7 +51,7 @@ const AboutMe = () => {
                 <span className="number" data-number="120">120</span>
                 <span>Project complete</span>
               </p>
-              <p><a href="#" className="btn btn-primary py-3 px-3">Download CV</a></p>
+              <p><a href={`http://127.0.0.1:8000${response.cv}`} className="btn btn-primary py-3 px-3">Download CV</a></p>
             </div>
           </div>
         </div>

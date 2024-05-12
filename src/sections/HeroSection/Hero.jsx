@@ -10,7 +10,6 @@ export const Hero = () => {
         axios.get(`http://127.0.0.1:8000/api/userInfo/1`)
       .then(res => {
         setResponse(res.data.data);
-         console.log(response);
       })
     }, [response])
 

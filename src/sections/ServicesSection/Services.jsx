@@ -6,11 +6,7 @@ import { MdBrandingWatermark } from "react-icons/md";
 import { SiAdobephotoshop } from "react-icons/si";
 import { MdAppShortcut } from "react-icons/md";
 import SectionHeader from "../../components/SectionHeader/SectionHeader";
-// import SectionHeader from "../../components/SectionHeader";
 const Services = () => {
-
-  // const descriptions =["web design", "Photography", "Web Developer", "App Developing","Branding","Product Strategy" ]
-  // const icons = [<IoAnalytics />,]
 
   const servicesData = [
     { key: 1, desc: "web design", icon: <TbBrandFigma  /> },
@@ -24,7 +20,7 @@ const Services = () => {
     return <ServicesCard key={data.key} desc={data.desc} icon={data.icon} />;
   });
   return (
-    <div className="ftco-section">
+    <div className="ftco-section" id="services-section">
       {/* <SectionHeader /> */}
       <div className="container text-center">
       <SectionHeader header={"Services"} desc={"Far far away, behind the word mountains, far from the countries Vokalia and Consonantia"} />

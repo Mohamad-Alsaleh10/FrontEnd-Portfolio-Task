@@ -2,6 +2,7 @@
 import './Navbar.css'
 
 export const Navbar = () => {
+
   return (
     <div>
         <nav className="navbar navbar-expand-lg bg-body-tertiary fixed-top">
@@ -16,19 +17,19 @@ export const Navbar = () => {
                     <a className="nav-link active" aria-current="page" href="#">Home</a>
                     </li>
                     <li className="nav-item">
-                    <a className="nav-link active" aria-current="page" href="#">About</a>
+                    <a className="nav-link active" aria-current="page" href="#about-section" >About</a>
                     </li>
                     <li className="nav-item">
-                    <a className="nav-link active" aria-current="page" href="#">Services  </a>
+                    <a className="nav-link active" aria-current="page" href="#services-section">Services  </a>
                     </li>
                     <li className="nav-item">
-                    <a className="nav-link active" aria-current="page" href="#">Skills</a>
+                    <a className="nav-link active" aria-current="page" href="#skills-section">Skills</a>
                     </li>
                     <li className="nav-item">
-                    <a className="nav-link active" aria-current="page" href="#">Projects</a>
+                    <a className="nav-link active" aria-current="page" href="#projects-section">Projects</a>
                     </li>
                     <li className="nav-item">
-                    <a className="nav-link active" aria-current="page" href="#">Contact</a>
+                    <a className="nav-link active" aria-current="page" href="#contact-section">Contact</a>
                     </li>
             
                 </ul>
