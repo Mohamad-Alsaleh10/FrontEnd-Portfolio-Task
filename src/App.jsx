@@ -1,4 +1,5 @@
 import "./App.css";
+import Resume from "./sections/ResumeSection/Resume"
 import { Navbar} from './components/Navbar/Navbar'
 import { Hero } from './sections/HeroSection/Hero'
 import Skills from './sections/SkillsSection/Skills'
@@ -11,6 +12,7 @@ import AboutMe from "./sections/AboutMeSection/AboutMe";
 function App() {
   return (
     <>
+      <Resume></Resume>
       <Navbar/>
       <Hero />
       <AboutMe/>
